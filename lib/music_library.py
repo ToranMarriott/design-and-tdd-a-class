@@ -8,7 +8,10 @@ class MusicLibrary:
         # No code here yet
 
     def add_track(self, track):
-        self.tracks = [track] 
+        if type(track) != str:
+            raise TypeError("String expected for track")
+        
+        self.tracks.append(track)
 
         
         # Parameters:
@@ -24,4 +27,5 @@ class MusicLibrary:
         #   A list of all tracks in the tracks library
         # Side-effects:
         #   none
-        pass # No code here yet
+         # No code here yet
+         return self.tracks
